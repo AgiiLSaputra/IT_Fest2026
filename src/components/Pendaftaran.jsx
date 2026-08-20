@@ -3,13 +3,32 @@ export default function Pendaftaran() {
     document.getElementById(id).classList.toggle('is-flipped')
   }
 
-  const flipContainer = { perspective: '1000px', height: '600px', position: 'relative', overflow: 'hidden' }
+  const flipContainer = { perspective: '1200px', height: '600px', position: 'relative' }
   const flipInner = { position: 'relative', width: '100%', height: '100%', transition: 'transform 0.8s', transformStyle: 'preserve-3d' }
-  const flipFront = { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', borderRadius: '32px', padding: '2rem', display: 'flex', flexDirection: 'column', background: '#131314', border: '1px solid rgba(255,255,255,0.1)' }
-  const flipBack = { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', borderRadius: '32px', padding: '2rem', display: 'flex', flexDirection: 'column', background: '#131314', border: '1px solid rgba(255,255,255,0.1)', transform: 'rotateY(180deg)' }
+  const flipFront = {
+    position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
+    backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden',
+    borderRadius: '32px', padding: '2rem', display: 'flex', flexDirection: 'column',
+    background: 'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 50%, rgba(255,255,255,0.08) 100%)',
+    backdropFilter: 'blur(40px) saturate(180%)',
+    WebkitBackdropFilter: 'blur(40px) saturate(180%)',
+    border: '1px solid rgba(255,255,255,0.18)',
+    boxShadow: '0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.15), inset 0 -1px 0 rgba(255,255,255,0.05)',
+  }
+  const flipBack = {
+    position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
+    backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden',
+    borderRadius: '32px', padding: '2rem', display: 'flex', flexDirection: 'column',
+    background: 'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 50%, rgba(255,255,255,0.08) 100%)',
+    backdropFilter: 'blur(40px) saturate(180%)',
+    WebkitBackdropFilter: 'blur(40px) saturate(180%)',
+    border: '1px solid rgba(255,255,255,0.18)',
+    boxShadow: '0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.15), inset 0 -1px 0 rgba(255,255,255,0.05)',
+    transform: 'rotateY(180deg)',
+  }
 
   return (
-    <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#050b18' }} id="pendaftaran">
+    <section className="py-24 relative" style={{ backgroundColor: '#050b18' }} id="pendaftaran">
       <div className="container mx-auto px-6 max-w-screen-xl relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 uppercase">PENDAFTARAN ACARA</h2>
