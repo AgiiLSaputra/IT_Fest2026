@@ -76,7 +76,3 @@ ITFest-React/
         ├── Footer.jsx
         └── WhatsAppButton.jsx
 ```
-
-## License
-
-Hak Cipta Dilindungi - Teknik Informatika UIR 2026
